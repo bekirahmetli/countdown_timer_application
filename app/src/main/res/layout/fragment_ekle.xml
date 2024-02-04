@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EkleFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sayaç Ekle"
+            android:textSize="24dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/okikonu"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        android:src="@drawable/baseline_arrow_circle_left_24"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatImageView>
+
+    <ImageView
+        android:id="@+id/ekleimageView"
+        android:layout_width="387dp"
+        android:layout_height="177dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="gorselSec"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toTopOf="@+id/ekleisimtext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ekleisimtext"
+        android:layout_width="221dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="279dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="İsim girin"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ekleimageView" />
+
+    <TextView
+        android:id="@+id/textViewDateTime"
+        android:layout_width="215dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="180dp"
+        android:gravity="center"
+        android:text="Tarih ve Saati Seçin"
+        android:hint="Zamanı seçin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ekleimageView"
+        app:layout_constraintVertical_bias="0.793" />
+
+    <Button
+        android:id="@+id/eklebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="99dp"
+        android:onClick="eklekaydet"
+        android:text="Kaydet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ekleisimtext"
+        app:layout_constraintVertical_bias="0.77" />
+
+    <Button
+        android:id="@+id/silbutton"
+        android:layout_width="91dp"
+        android:layout_height="47dp"
+        android:onClick="sil"
+        android:text="Sil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDateTime"
+        app:layout_constraintVertical_bias="0.603" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
